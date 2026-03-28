@@ -1,16 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useI18n } from "@/lib/i18n";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import WhyUsSection from "@/components/WhyUsSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { Helmet } from "react-helmet-async";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+export default function Index() {
+  const { dir, lang } = useI18n();
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div dir={dir}>
+      <Helmet>
+        <html lang={lang} dir={dir} />
+        <title>Moallem AC Services | Professional AC & Home Cleaning Services</title>
+        <meta name="description" content="Professional AC cleaning, water tank sanitization, pest control, furniture cleaning, and more. Trusted home services in Saudi Arabia." />
+        <link rel="canonical" href="https://moallemac.com" />
+      </Helmet>
+      <Header />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <WhyUsSection />
+        <CTASection />
+      </main>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
-};
-
-const Index = PlaceholderIndex;
-
-export default Index;
+}
