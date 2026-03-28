@@ -1,11 +1,17 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
-import {
-  Wind, Droplets, Waves, Sofa, Bug, Rat, PaintBucket,
-} from "lucide-react";
 
-const serviceKeys = ["ac", "water", "pool", "furniture", "pest", "rodent", "mould"] as const;
-const serviceIcons = [Wind, Droplets, Waves, Sofa, Bug, Rat, PaintBucket];
+import serviceAc from "@/assets/service-ac.jpg";
+import serviceWater from "@/assets/service-water.jpg";
+import servicePool from "@/assets/service-pool.jpg";
+import serviceFurniture from "@/assets/service-furniture.jpg";
+import servicePest from "@/assets/service-pest.jpg";
+import serviceRodent from "@/assets/service-rodent.jpg";
+import serviceMould from "@/assets/service-mould.jpg";
+import serviceBedbug from "@/assets/service-bedbug.jpg";
+
+const serviceKeys = ["ac", "water", "pool", "furniture", "pest", "rodent", "mould", "bedbug"] as const;
+const serviceImages = [serviceAc, serviceWater, servicePool, serviceFurniture, servicePest, serviceRodent, serviceMould, serviceBedbug];
 
 export default function ServicesSection() {
   const { t, dir } = useI18n();
@@ -20,7 +26,6 @@ export default function ServicesSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {serviceKeys.map((key, i) => {
-            const Icon = serviceIcons[i];
             const service = t.services[key];
 
             return (
@@ -30,21 +35,31 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="group rounded-2xl bg-card p-6 service-card-shadow hover:service-card-hover-shadow transition-shadow duration-300 border"
+                className="group rounded-2xl bg-card overflow-hidden service-card-shadow hover:service-card-hover-shadow transition-shadow duration-300 border"
               >
-                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <Icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={serviceImages[i]}
+                    alt={service.title}
+                    loading="lazy"
+                    width={640}
+                    height={640}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{service.desc}</p>
-                <ul className="space-y-1.5">
-                  {service.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{service.desc}</p>
+                  <ul className="space-y-1.5">
+                    {service.items.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm text-foreground/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             );
           })}
