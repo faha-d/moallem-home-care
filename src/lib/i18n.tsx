@@ -54,6 +54,11 @@ const translations = {
         desc: "Specialized mould removal and wall treatment to restore healthy indoor surfaces.",
         items: ["Mould Removal", "Wall Treatment", "Prevention Coating"],
       },
+      bedbug: {
+        title: "Bed Bug Control",
+        desc: "Complete bed bug extermination and prevention for a peaceful, bite-free sleep.",
+        items: ["Inspection & Detection", "Heat Treatment", "Chemical Treatment", "Prevention Plans"],
+      },
     },
     whyUs: {
       title: "Why Choose Moallem AC Services?",
@@ -124,6 +129,11 @@ const translations = {
         title: "معالجة جدار العفن",
         desc: "إزالة متخصصة للعفن ومعالجة الجدران لاستعادة أسطح داخلية صحية.",
         items: ["إزالة العفن", "معالجة الجدران", "طلاء وقائي"],
+      },
+      bedbug: {
+        title: "مكافحة بق الفراش",
+        desc: "إبادة شاملة لبق الفراش والوقاية منه لنوم هادئ وخالٍ من اللدغات.",
+        items: ["فحص وكشف", "معالجة حرارية", "معالجة كيميائية", "خطط وقائية"],
       },
     },
     whyUs: {
