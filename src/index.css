@@ -89,3 +89,16 @@
     box-shadow: var(--service-card-hover-shadow);
   }
 }
+
+.web-logo {
+  height: 6rem;
+  margin-top: .8rem;
+}
+
+@media(max-width: 640px) {
+  .web-logo {
+    height: 5rem;
+    margin-top: .5rem;
+    margin-left: -1rem;
+  }
+}

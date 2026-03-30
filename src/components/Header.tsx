@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import webLogo from "@/assets/website-logo.png";
 
 const WHATSAPP_URL = "https://wa.me/9660501888957";
 
@@ -11,8 +12,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b" dir={dir}>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="text-xl font-extrabold text-primary tracking-tight">
-          Moallem <span className="text-foreground">Home Services</span>
+        <a href="#" className="flex items-center">
+          <img src={webLogo} alt="Moallem Home Services" className="w-auto web-logo" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
