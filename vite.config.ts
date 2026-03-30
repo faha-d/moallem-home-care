@@ -4,7 +4,6 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
-  base: "/moallem-home-care/",
   server: {
     host: "::",
     port: 8080,
@@ -13,6 +12,7 @@ export default defineConfig(() => ({
     },
   },
   plugins: [react()],
+  base: "/moallem-home-care/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
