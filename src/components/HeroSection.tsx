@@ -3,12 +3,12 @@ import heroBg from "@/assets/hero-bg.jpg";
 import { motion } from "framer-motion";
 import { Wind, Droplets, ShieldCheck, Clock } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/966XXXXXXXXXX";
+const WHATSAPP_URL = "https://wa.me/9660501888957";
 
 const stats = [
-  { icon: Wind, valueEn: "500+", valueAr: "+٥٠٠", keyEn: "customers", keyAr: "customers" },
+  { icon: Wind, valueEn: "5000+", valueAr: "+٥٠٠", keyEn: "customers", keyAr: "customers" },
   { icon: Clock, valueEn: "10+", valueAr: "+١٠", keyEn: "experience", keyAr: "experience" },
-  { icon: ShieldCheck, valueEn: "4.9/5", valueAr: "٤.٩/٥", keyEn: "rating", keyAr: "rating" },
+  { icon: ShieldCheck, valueEn: "4.5/5", valueAr: "٤.٥/٥", keyEn: "rating", keyAr: "rating" },
   { icon: Droplets, valueEn: "7+", valueAr: "+٧", keyEn: "services", keyAr: "services" },
 ];
 

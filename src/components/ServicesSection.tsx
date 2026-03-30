@@ -10,8 +10,8 @@ import serviceRodent from "@/assets/service-rodent.jpg";
 import serviceMould from "@/assets/service-mould.jpg";
 import serviceBedbug from "@/assets/service-bedbug.jpg";
 
-const serviceKeys = ["ac", "water", "pool", "furniture", "pest", "rodent", "mould", "bedbug"] as const;
-const serviceImages = [serviceAc, serviceWater, servicePool, serviceFurniture, servicePest, serviceRodent, serviceMould, serviceBedbug];
+const serviceKeys = ["ac", "water", "pool", "furniture", "pest", "bedbug" ,"rodent", "mould" ] as const;
+const serviceImages = [serviceAc, serviceWater, servicePool, serviceFurniture, servicePest, serviceBedbug, serviceRodent, serviceMould];
 
 export default function ServicesSection() {
   const { t, dir } = useI18n();

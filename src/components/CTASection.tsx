@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 
-const WHATSAPP_URL = "https://wa.me/966XXXXXXXXXX";
+const WHATSAPP_URL = "https://wa.me/9660501888957";
 
 export default function CTASection() {
   const { t, dir } = useI18n();
