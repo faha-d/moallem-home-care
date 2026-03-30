@@ -12,7 +12,7 @@ export default defineConfig(() => ({
     },
   },
   plugins: [react()],
-  base: "/moallem-home-care/",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
